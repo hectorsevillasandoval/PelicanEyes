@@ -1,0 +1,290 @@
+/*####################################
+#
+#	Autor: Hector Sevilla
+#	Descripcion: Hoja de estilos para 
+#				 la plantilla web de 
+				 Pelican Eyes
+#	Fecha: 23/10/2014
+#	Hora: 11:30
+#
+#	1- Cabecera
+#	2- Menu
+#	3- Slider
+#	4- Seccion Principal
+#	5- Reviews
+#	6- mapa
+#	7- Redes Sociales
+#	8- Footer
+#	9- Mediaquery
+#####################################*/
+
+@import 'fonts.styl'
+@import 'normalize.styl'
+//@import 'bxslider.styl'
+@import 'nib'
+
+
+//Colores
+celeste= #67b7cf
+amarillo = #fdb435
+texto = #6c7f86
+texto-gris = #767676
+cabeceras = #1b5882
+gris-bajo = #f0f5f7
+enlaces = #79929a
+azul-puro= #0a1928
+
+//OOCSS
+
+.relativo
+	position relative
+.absoluto
+	position absolute
+.fix
+	overflow hidden
+.left
+	float left
+.right
+	float right
+
+[class^="icon-"], [class*=" icon-"]
+	font-family 'icomoon'
+	speak none
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	line-height 1
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+.icon-search
+	&:before
+		content: "\f002"
+
+.icon-map
+	&:before
+		content: "\f041"
+
+.icon-play
+	&:before
+		content: "\f04b"
+
+.icon-twitter
+	&:before
+		content: "\f099"
+
+.icon-facebook
+	&:before
+		content: "\f09a"
+
+.icon-group
+	&:before
+		content: "\f0c0"
+
+.icon-quote-left
+	&:before
+		content: "\f10d"
+
+alinear()
+	display inline-block
+	vertical-align top
+rem(pixel)
+	(pixel/16)rem
+
+a
+	text-decoration none
+ul
+p
+figure
+	margin 0
+	padding 0
+ul
+	list-style none
+
+body
+	font-family: OSansReg
+	font-size: 16px
+	font-weight: normal
+
+/*****************************************
+*	1- Cabecera
+******************************************/
+header
+	padding 5px 1rem
+	figure
+		text-align: center
+		margin 5px 0
+	.sprite
+		text-align: right
+		li
+			alinear()
+			a
+				background-image: url(../img/spriteSocial.png)
+				display block
+				height 34px
+				margin 0 8px
+				width 34px
+			.fb
+				background-position: 0 0
+			.tw
+				background-position: -55px 0
+			.g
+				background-position: -108px 0
+			.pin
+				background-position: -162px 0
+				margin-right 0
+	.contact
+		text-align: right
+		p
+			color texto
+			font-size: .8rem
+			margin 7px 0
+			a
+				&:link
+				&:visited
+					color texto
+					font-size: .8rem
+/*****************************************
+*	2- Menu
+******************************************/
+
+/*****************************************
+*	3- Slider
+******************************************/
+.slide
+	font-size: 0
+	img
+		max-width 100%
+		height auto
+/*****************************************
+*	4- Seccion Principal
+******************************************/
+section
+	background-color: gris-bajo
+	padding 2rem 1rem
+	.wrap
+		h1
+			color cabeceras
+			font-family: JosefinLight
+			font-size: rem(48)
+			text-align: center
+			margin-top 0
+		.texto
+			color texto
+			font-family: OSansReg
+			font-size: rem(14)
+/*****************************************
+*	5- Reviews
+******************************************/
+.reviews
+	padding rem(65) 1rem
+	.review
+		text-align: center
+		.circulo
+			background-color: gris-bajo
+			border-radius 50%
+			box-sizing border-box
+			height rem(92)
+			line-height 2
+			margin 10px auto
+			padding 1.5rem 0
+			max-width rem(92)
+			span
+				color amarillo
+				font-size: rem(36)
+		p
+			font-family: OSansLightIt
+			font-size: rem(14)
+			margin 10px 0 2rem 0
+		a
+			&:link
+			&:visited
+				color enlaces
+				font-family: OSansSem
+				font-size: rem(18)
+			&:hover
+				color amarillo
+/*****************************************
+*	6- mapa
+******************************************/
+.mapa
+	height rem(370)
+	width auto
+/*****************************************
+*	7- Redes Sociales
+******************************************/
+.redesSociales
+	background-image: url(../img/piscina.jpg)
+	background-repeat: no-repeat
+	background-position: top center
+	padding 1rem
+	width auto
+	.widget
+		background-color: #FFF
+		height rem(322)
+		margin 1rem auto
+		width rem(288)
+		.titulo
+			background-color: azul-puro
+			border-bottom 3px solid #67b7cf
+			padding .4rem 0
+			position relative
+			span
+				color amarillo
+				font-size: rem(28)
+				left 12px
+				position absolute
+				text-align: center
+				top 10px
+			p
+				color white
+				font-family: JosefinLight
+				font-size: rem(30)
+				text-align:  center
+		.contenido
+			background-color: #FFF
+/*****************************************
+*	8- Footer
+******************************************/
+footer
+	background-color: azul-puro
+	padding .6rem 1rem
+	text-align: center
+	.acerca
+		border-bottom 1px solid #858c94
+		ul
+			li
+				padding .7rem 0
+				a
+					&:link
+					&:visited
+						color white
+						font-size: rem(14)
+						padding 0 .4rem
+						text-decoration: underline
+						text-transform: uppercase
+				span
+					color white
+	.company
+		color white
+		font-size: 14px
+		padding 1rem 0 0 0
+		text-align: center
+		.izquierda
+			padding-bottom .7rem
+		.derecha
+			a
+				&:link
+				&:visited
+					color white
+						
+
+/*
+@media screen and (min-width:400px)
+	
+@media screen and (min-width:768px)
+	
+@media screen and (min-width:1000px)
+
+*/	
