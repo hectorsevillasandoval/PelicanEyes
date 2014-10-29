@@ -280,11 +280,99 @@ footer
 					color white
 						
 
-/*
-@media screen and (min-width:400px)
+
+/*@media screen and (min-width:400px)
+	header
+		&.small
+			background-color: red*/
 	
 @media screen and (min-width:768px)
-	
-@media screen and (min-width:1000px)
+	header
+		&.medium
+			clearfix()
+			padding 1.2rem 1.5rem
+			figure
+				float left
+			.info
+				float right
+	section
+		&.medium
+			padding-left 2rem
+			padding-right: 2rem
+	.reviews
+		&.medium
+			.review
+				margin-left auto
+				margin-right: auto
+				max-width 50%
+	.redesSociales
+		&.medium
+			.wrap
+				text-align: center
+			.widget
+				alinear()
+				margin-left 5px
+				margin-right: 5px
+	footer
+		&.medium
+			.acerca
+				ul
+					li
+						alinear()
+						margin auto 10px
+			.company
+				clearfix()
+				.izquierda
+					float left
+					text-align: left
+				.derecha
+					float right
+					text-align: right
 
-*/	
+@media screen and (min-width:1000px)
+	header
+		&.large
+			margin 0 auto
+			max-width rem(940)
+			padding-left 0
+			padding-right: 0
+	section
+		&.large
+			padding-left: 0
+			padding-right: 0
+			.wrap
+				max-width rem(940)
+				margin-left: auto
+				margin-right: auto
+				.texto
+					margin-left: auto
+					margin-right: auto
+					max-width rem(730)
+	.reviews
+		&.large
+			clearfix()
+			margin-left auto
+			margin-right: auto
+			max-width rem(940)
+			padding-left: 0
+			padding-right: 0
+			.review
+				box-sizing: border-box
+				float left
+				padding-left 2.5rem
+				padding-right: 2.5rem
+	.redesSociales
+		&.large
+			.widget
+				margin-left: 10px
+				margin-right: 10px
+	footer
+		&.large
+			padding-left 0
+			padding-right: 0
+			.wrap
+				margin-left: auto
+				margin-right: auto
+				max-width rem(940)
+			
+			

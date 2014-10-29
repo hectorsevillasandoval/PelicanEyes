@@ -350,3 +350,150 @@ footer .company .derecha a:link,
 footer .company .derecha a:visited {
   color: #fff;
 }
+
+@media screen and (min-width:768px) {
+  header.medium {
+    zoom: 1;
+    padding: 1.2rem 1.5rem;
+  }
+
+  header.medium:before,
+  header.medium:after {
+    content: "";
+    display: table;
+  }
+
+  header.medium:after {
+    clear: both;
+  }
+
+  header.medium figure {
+    float: left;
+  }
+
+  header.medium .info {
+    float: right;
+  }
+
+  section.medium {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .reviews.medium .review {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+  }
+
+  .redesSociales.medium .wrap {
+    text-align: center;
+  }
+
+  .redesSociales.medium .widget {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  footer.medium .acerca ul li {
+    display: inline-block;
+    vertical-align: top;
+    margin: auto 10px;
+  }
+
+  footer.medium .company {
+    zoom: 1;
+  }
+
+  footer.medium .company:before,
+  footer.medium .company:after {
+    content: "";
+    display: table;
+  }
+
+  footer.medium .company:after {
+    clear: both;
+  }
+
+  footer.medium .company .izquierda {
+    float: left;
+    text-align: left;
+  }
+
+  footer.medium .company .derecha {
+    float: right;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  header.large {
+    margin: 0 auto;
+    max-width: 58.75rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  section.large {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  section.large .wrap {
+    max-width: 58.75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section.large .wrap .texto {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45.625rem;
+  }
+
+  .reviews.large {
+    zoom: 1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 58.75rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .reviews.large:before,
+  .reviews.large:after {
+    content: "";
+    display: table;
+  }
+
+  .reviews.large:after {
+    clear: both;
+  }
+
+  .reviews.large .review {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .redesSociales.large .widget {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  footer.large {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  footer.large .wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 58.75rem;
+  }
+}
