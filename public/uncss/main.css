@@ -93,6 +93,10 @@ input::-moz-focus-inner {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-play:before {
+  content: "\f04b";
+}
+
 .icon-twitter:before {
   content: "\f099";
 }
@@ -128,6 +132,13 @@ body {
   font-family: OSansReg;
   font-size: 16px;
   font-weight: normal;
+}
+
+h2 {
+  color: #6c7f86;
+  font-family: JosefinLight;
+  font-size: 1.625rem;
+  font-weight: bold;
 }
 
 header {
@@ -261,6 +272,25 @@ section .wrap .texto {
   color: #fdb435;
 }
 
+.reviews .caja {
+  color: #6c7f86;
+  text-align: center;
+}
+
+.reviews .caja figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reviews .caja p {
+  font-family: OSansReg;
+}
+
+.reviews .caja h3 {
+  font-family: OSansReg;
+  font-size: 1.125rem;
+}
+
 .mapa {
   height: 23.125rem;
   width: auto;
@@ -306,6 +336,33 @@ section .wrap .texto {
 
 .redesSociales .widget .contenido {
   background-color: #fff;
+}
+
+.redesSociales .izquierda,
+.redesSociales .derecha {
+  color: #fff;
+}
+
+.redesSociales .izquierda h2,
+.redesSociales .derecha h2 {
+  color: #fff;
+}
+
+.redesSociales .izquierda p,
+.redesSociales .derecha p {
+  font-size: .8125rem;
+}
+
+.redesSociales .izquierda p .icon-play,
+.redesSociales .derecha p .icon-play {
+  font-size: .8125rem;
+}
+
+.redesSociales .izquierda .titulo,
+.redesSociales .derecha .titulo {
+  font-family: OSansReg;
+  font-size: .875rem;
+  padding-right: 5px;
 }
 
 footer {
