@@ -93,6 +93,10 @@ input::-moz-focus-inner {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+  content: "\f002";
+}
+
 .icon-play:before {
   content: "\f04b";
 }
@@ -228,6 +232,25 @@ section .wrap .texto {
   font-size: .875rem;
 }
 
+section .wrap .texto a:link,
+section .wrap .texto .mail:link,
+section .wrap .texto a:visited,
+section .wrap .texto .mail:visited {
+  color: #6c7f86;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+section .wrap .texto li {
+  padding-bottom: .6rem;
+  padding-left: 1rem;
+  padding-top: .6rem;
+}
+
+section .wrap .texto li span {
+  padding: 0 1rem;
+}
+
 .reviews {
   padding: 4.0625rem 1rem;
 }
@@ -275,11 +298,58 @@ section .wrap .texto {
 .reviews .caja {
   color: #6c7f86;
   text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  margin: 2rem auto;
+}
+
+.reviews .caja figure {
+  position: relative;
 }
 
 .reviews .caja figure img {
   max-width: 100%;
   height: auto;
+}
+
+.reviews .caja figure .hover {
+  background-color: #0a1928;
+  left: -99999;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 12.1875rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 5rem;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.reviews .caja figure .hover a:link,
+.reviews .caja figure .hover a:visited {
+  color: #fff;
+}
+
+.reviews .caja figure .hover span {
+  font-size: 2.5rem;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.reviews .caja figure:hover .hover {
+  left: 0;
+  opacity: .6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
 }
 
 .reviews .caja p {
@@ -291,15 +361,19 @@ section .wrap .texto {
   font-size: 1.125rem;
 }
 
+.reviews .caja:last-child {
+  border-bottom: 0;
+}
+
 .mapa {
   height: 23.125rem;
   width: auto;
 }
 
 .redesSociales {
-  background-image: url("../img/piscina.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: top center;
+  background-color: #0b2138;
   padding: 1rem;
   width: auto;
 }
@@ -336,6 +410,69 @@ section .wrap .texto {
 
 .redesSociales .widget .contenido {
   background-color: #fff;
+}
+
+.redesSociales .leyendaTitulo {
+  color: #fff;
+  font-family: JosefinLight;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.redesSociales .gallery {
+  color: #6c7f86;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 2rem auto;
+}
+
+.redesSociales .gallery figure {
+  height: 17.125rem;
+  max-width: 17.125rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.redesSociales .gallery figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.redesSociales .gallery figure .hover {
+  background-color: #0a1928;
+  left: -99999;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 17.0625rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 40%;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.redesSociales .gallery figure .hover span {
+  font-size: 2.5rem;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.redesSociales .gallery figure:hover .hover {
+  left: 0;
+  opacity: .6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
 }
 
 .redesSociales .izquierda,
@@ -454,6 +591,20 @@ footer .company .derecha a:visited {
     margin-right: 5px;
   }
 
+  .redesSociales.medium .Galeria {
+    text-align: center;
+  }
+
+  .redesSociales.medium .Galeria .gallery {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1rem;
+  }
+
+  .redesSociales.medium .Galeria .gallery:nth-child(2n+2) {
+    margin-right: 0;
+  }
+
   footer.medium .acerca ul li {
     display: inline-block;
     vertical-align: top;
@@ -538,9 +689,87 @@ footer .company .derecha a:visited {
     padding-right: 2.5rem;
   }
 
+  .reviews.large .caja {
+    zoom: 1;
+  }
+
+  .reviews.large .caja:before,
+  .reviews.large .caja:after {
+    content: "";
+    display: table;
+  }
+
+  .reviews.large .caja:after {
+    clear: both;
+  }
+
+  .reviews.large .caja figure {
+    float: left;
+  }
+
+  .reviews.large .caja .contenido {
+    float: right;
+    max-width: 35.75rem;
+    text-align: left;
+  }
+
+  .reviews.large .caja .contenido h2 {
+    margin-top: 0;
+    margin-bottom: .7rem;
+  }
+
+  .reviews.large .caja .contenido h3 {
+    margin-top: .6rem;
+    margin-bottom: .7rem;
+  }
+
+  .redesSociales.large {
+    zoom: 1;
+    background-image: url("../img/piscina.jpg");
+  }
+
+  .redesSociales.large:before,
+  .redesSociales.large:after {
+    content: "";
+    display: table;
+  }
+
+  .redesSociales.large:after {
+    clear: both;
+  }
+
+  .redesSociales.large .wrap {
+    max-width: 58.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
   .redesSociales.large .widget {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .redesSociales.large .izquierda {
+    float: left;
+    max-width: 28.125rem;
+  }
+
+  .redesSociales.large .derecha {
+    float: right;
+    max-width: 28.125rem;
+  }
+
+  .redesSociales.large .leyendaTitulo {
+    text-align: center;
+  }
+
+  .redesSociales.large .Galeria .gallery:nth-child(2n+2) {
+    margin-right: 1rem;
+  }
+
+  .redesSociales.large .Galeria .gallery:nth-child(3n+3) {
+    margin-right: 0;
   }
 
   footer.large {
