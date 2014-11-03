@@ -91,7 +91,8 @@ alinear()
 	vertical-align top
 rem(pixel)
 	(pixel/16)rem
-
+html
+	font-size: 16px
 a
 	text-decoration none
 ul
@@ -141,6 +142,7 @@ header
 				margin-right 0
 	.contact
 		text-align: right
+		margin-top: 1rem
 		p
 			color texto
 			font-size: .8rem
@@ -158,6 +160,7 @@ header
 *	3- Slider
 ******************************************/
 .slide
+.banner
 	font-size: 0
 	img
 		max-width 100%
@@ -238,7 +241,6 @@ section
 			&:hover
 				color amarillo
 	.caja
-	.gallery
 		color texto
 		text-align: center
 		border-bottom 1px solid #ccc
@@ -256,7 +258,7 @@ section
 				position absolute
 				right 0
 				top 0
-				height rem(195)
+				height 195px
 				box-sizing: border-box
 				padding-top 5rem
 				transition all ease .5s 
@@ -354,7 +356,7 @@ section
 				position absolute
 				right 0
 				top 0
-				height rem(273)
+				height rem(274)
 				box-sizing: border-box
 				padding-top 40%
 				transition all ease .5s 
@@ -412,6 +414,10 @@ footer
 		text-align: center
 		.izquierda
 			padding-bottom .7rem
+			a
+				img
+					max-width 100%
+					height auto
 		.derecha
 			a
 				&:link
@@ -434,6 +440,9 @@ footer
 				float left
 			.info
 				float right
+	.banner
+		&.medium
+			text-align: center
 	section
 		&.medium
 			padding-left 2rem
@@ -485,6 +494,9 @@ footer
 				.izquierda
 					float left
 					text-align: left
+					a
+						img
+							max-width rem(325)
 				.derecha
 					float right
 					text-align: right
@@ -496,6 +508,11 @@ footer
 			max-width rem(940)
 			padding-left 0
 			padding-right: 0
+	.banner
+		&.large
+			max-width rem(940)
+			margin-left: auto
+			margin-right: auto
 	section
 		&.large
 			padding-left: 0

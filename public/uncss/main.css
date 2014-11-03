@@ -117,6 +117,10 @@ input::-moz-focus-inner {
   content: "\f10d";
 }
 
+html {
+  font-size: 16px;
+}
+
 a {
   text-decoration: none;
 }
@@ -190,6 +194,7 @@ header .sprite li .pin {
 
 header .contact {
   text-align: right;
+  margin-top: 1rem;
 }
 
 header .contact p {
@@ -204,11 +209,13 @@ header .contact p a:visited {
   font-size: .8rem;
 }
 
-.slide {
+.slide,
+.banner {
   font-size: 0;
 }
 
-.slide img {
+.slide img,
+.banner img {
   max-width: 100%;
   height: auto;
 }
@@ -321,7 +328,7 @@ section .wrap .texto li span {
   position: absolute;
   right: 0;
   top: 0;
-  height: 12.1875rem;
+  height: 195px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -449,7 +456,7 @@ section .wrap .texto li span {
   position: absolute;
   right: 0;
   top: 0;
-  height: 17.0625rem;
+  height: 17.125rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -540,6 +547,11 @@ footer .company .izquierda {
   padding-bottom: .7rem;
 }
 
+footer .company .izquierda a img {
+  max-width: 100%;
+  height: auto;
+}
+
 footer .company .derecha a:link,
 footer .company .derecha a:visited {
   color: #fff;
@@ -567,6 +579,10 @@ footer .company .derecha a:visited {
 
   header.medium .info {
     float: right;
+  }
+
+  .banner.medium {
+    text-align: center;
   }
 
   section.medium {
@@ -630,6 +646,10 @@ footer .company .derecha a:visited {
     text-align: left;
   }
 
+  footer.medium .company .izquierda a img {
+    max-width: 20.3125rem;
+  }
+
   footer.medium .company .derecha {
     float: right;
     text-align: right;
@@ -642,6 +662,12 @@ footer .company .derecha a:visited {
     max-width: 58.75rem;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .banner.large {
+    max-width: 58.75rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   section.large {
