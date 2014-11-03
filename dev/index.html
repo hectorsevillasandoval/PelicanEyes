@@ -40,7 +40,20 @@
     <!-- Cabecera Fin -->
 
     <!-- Menu Inicio -->
-
+    <nav class="small large">
+        <div class="wrap">
+            <button class="icon-reorder">
+            </button>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="accomodations.html">accomodations</a></li>
+                <li><a href="restaurants.html">restaurants</a></li>
+                <li><a href="activities.html">activities</a></li>
+                <li><a href="weddings.html">weddings</a></li>
+                <li><a href="corporateEvents.html">corporate events</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- Menu Fin -->
     <!-- Slider Inicio -->
     <div class="slide"><img src="img/Banner.jpg" height="650" width="2000" alt="Pelican Eyes"></div>
@@ -145,6 +158,13 @@ Resort Facility: Pelican Eyes Resort & Spa is a walking property with MANY stair
         </div>
     </footer>
     <!-- Footer Fin -->
-
+    <script type="text/javascript" src="js/minificado/all.js"></script>
+    <script>
+        $(document).on("ready",function(){
+            $("nav button").click(function(){
+                $("nav ul").slideToggle();
+            });
+        });
+    </script>
     </body>
 </html>

@@ -58,6 +58,9 @@ azul-puro= #0a1928
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
 
+.icon-reorder:before
+	content: "\e600"
+
 .icon-search
 	&:before
 		content: "\f002"
@@ -155,7 +158,43 @@ header
 /*****************************************
 *	2- Menu
 ******************************************/
-
+nav
+	background-color: celeste
+	height auto
+	padding 0 .3rem
+	position relative
+	text-align: right
+	button
+		background-color: transparent
+		border 0
+		color white
+		font-size: 2rem
+		padding .4rem
+		&:hover
+			color amarillo
+	ul
+		background-color: celeste
+		display none
+		left 0
+		opacity .9
+		padding .5rem 1rem 0 1rem
+		position absolute
+		right 0
+		text-align: left
+		top 2.8rem
+		li
+			border-bottom 1px solid #ccc
+			margin .5rem 0
+			padding .5rem 0
+			a
+				&:link
+				&:visited
+					color white
+					text-transform: capitalize
+				&:hover
+					color amarillo
+			&:last-child
+				border-bottom 0
 /*****************************************
 *	3- Slider
 ******************************************/
@@ -426,10 +465,8 @@ footer
 						
 
 
-/*@media screen and (min-width:400px)
-	header
-		&.small
-			background-color: red*/
+/*@media screen and (min-width:400px)*/
+	
 	
 @media screen and (min-width:768px)
 	header
@@ -508,6 +545,43 @@ footer
 			max-width rem(940)
 			padding-left 0
 			padding-right: 0
+	nav
+		&.large
+			text-align center
+			height rem(40)
+			width auto
+			.wrap
+				margin-left: auto
+				margin-right: auto
+				max-width rem(940)
+				button
+					display none
+				ul
+					background-color: transparent
+					display block !important
+					left 0
+					opacity 1
+					padding 0
+					position relative
+					top 0
+					li
+						alinear()
+						border-bottom 0
+						border-top 4px solid transparent
+						box-sizing: border-box
+						margin 0 2rem
+						padding 0
+						transition all .3s ease-out
+						a
+							&:link
+							&:visited
+								color white
+								display block
+								padding .3rem 0
+								text-transform: capitalize
+						&:hover
+							border-top 4px solid amarillo
+			
 	.banner
 		&.large
 			max-width rem(940)
